@@ -10,7 +10,7 @@ class DefaultController {
     /**
      * @Route("/", methods={"GET"})
      */
-    public function index(Request $request)
+/*    public function index(Request $request)
     {
        $resp = new Response(json_encode([
            "recebido" => $request->get('nome'),
@@ -21,6 +21,6 @@ class DefaultController {
 
        return $resp;
     }
-
+*/
 
 }

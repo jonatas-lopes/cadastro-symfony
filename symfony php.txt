@@ -1,0 +1,10 @@
+Criando um projeto pelo symfony 
+
+composer create-project symfony/skeleton cadastro-symfony
+
+sendo cadastro-symfony o nome do projeto. Podendo ser qualquer um . 
+
+Usar um servidor web 
+
+php -S localhost:8000 -t public/
+

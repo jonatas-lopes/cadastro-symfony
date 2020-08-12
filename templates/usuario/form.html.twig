@@ -1,0 +1,25 @@
+{%extends "base.html.twig" %}
+
+{%block title %}Cadastro de Usuarios{%endblock%}
+
+{%block topo %}
+<div class="topo">
+        <img src="{{asset('img/logo.jpg')}}" />
+</div>
+{%endblock%}
+
+{%block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+{%endblock%}
+
+
+{%block body %}
+<div class="formulario">
+        <form method="POST" action="{{url('web_usuario_salvar')}}">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="email" placeholder="Email">
+
+            <button type="submit">Salvar</button>
+        </form>
+</div>
+{%endblock%}

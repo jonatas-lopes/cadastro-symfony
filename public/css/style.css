@@ -1,0 +1,19 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.topo {
+
+    background-color:whitesmoke;
+}
+
+.sucesso{
+    font-size: 25px;
+    color: green;
+}
+
+.falha{
+    font-size: 25px;
+    color: red;
+}
