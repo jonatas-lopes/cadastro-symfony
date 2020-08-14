@@ -8,3 +8,8 @@ Usar um servidor web
 
 php -S localhost:8000 -t public/
 
+
+para realizar uma query no banco pelo terminal utilize o comando 
+
+php bin/console doctrine:query:sql "SELECT * FROM usuario";
+

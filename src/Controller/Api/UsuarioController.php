@@ -2,14 +2,16 @@
 
 namespace App\Controller\Api;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository;
 
 /**
  * @Route("Api/v1", name="api_v1_usuario")
  */
 
-class UsuarioController
+class UsuarioController extends AbstractController
 {   
     /**
      * @Route("/lista", methods={"GET"}, name="lista")
@@ -17,9 +19,12 @@ class UsuarioController
 
     public function lista(): JsonResponse
     {
-        return new JsonResponse([
-            "Implentar Lista na API", 404
-        ]);
+
+        $doctrine = $this->getDoctrine()->getRepository(Usuario::class);
+        
+        dump($doctrine->findAll());
+
+        return new JsonResponse(["Implentar Lista na API", 404]);
     }
 
     /**
@@ -28,9 +33,7 @@ class UsuarioController
     
     public function cadastro(): JsonResponse
     {
-        return new JsonResponse([
-            "Implentar cadastro API", 404
-        ]);
+        return new JsonResponse(["Implentar cadastro API", 404]);
     }
 
 }
